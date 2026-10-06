@@ -1,0 +1,11 @@
+﻿name: nncontrol
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - pip
+  - pip:
+      - torch==2.14.1
+      - scipy==1.17.1
