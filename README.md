@@ -40,8 +40,7 @@ $$
 其中 `f*` 是未知光滑函数。把标称已知部分记作 `f`，未知部分记作 `φ`：
 
 $$
-f^*(x_1) = f(x_1) + \varphi(x_1), \qquad
-\varphi(x_1) = \theta^{*T}\zeta(x_1) + \delta(x_1)
+f^*(x_1) = f(x_1) + \varphi(x_1), \qquad \varphi(x_1) = \theta^{*T}\zeta(x_1) + \delta(x_1)
 $$
 
 - `ζ(x1)`：已知的 RBF 基函数向量（固定中心、固定宽度）；
@@ -65,11 +64,10 @@ $$
 **控制律**（平滑函数，无切换、无抖振）
 
 $$
-u = -z_1 - z_2 + \frac{\partial \alpha}{\partial x_1}\big(x_2 + f + \theta^{T}\zeta\big)
-+ \frac{\partial \alpha}{\partial \theta}\,\dot{\theta} + \frac{\partial \alpha}{\partial \psi}\,\dot{\psi} - \beta_2
+u = -z_1 - z_2 + \frac{\partial \alpha}{\partial x_1}\big(x_2 + f + \theta^{T}\zeta\big) + \frac{\partial \alpha}{\partial \theta}\,\dot{\theta} + \frac{\partial \alpha}{\partial \psi}\,\dot{\psi} - \beta_2
 $$
 
-其中 `β₂ = ψ·w₂`，`w₂ = (∂α/∂x₁)·tanh(z₂·(∂α/∂x₁)/ε)`。
+其中 $\beta_2 = \psi\,w_2$，$w_2 = \frac{\partial \alpha}{\partial x_1}\,\tanh\!\big(\frac{\partial \alpha}{\partial x_1}\,z_2 / \varepsilon\big)$。
 
 **权重自适应律**（含泄漏项 `σ`，防止权重漂移）
 
@@ -86,8 +84,7 @@ $$
 **Lyapunov 函数**
 
 $$
-V = \tfrac12\Big(z_1^2 + z_2^2 + \tilde{\theta}^{T}\Gamma^{-1}\tilde{\theta} + \gamma^{-1}\tilde{\psi}^2\Big),
-\qquad \tilde{\theta}=\theta-\theta^*,\ \ \tilde{\psi}=\psi-\psi^*
+V = \tfrac{1}{2}\Big(z_1^2 + z_2^2 + \tilde{\theta}^{T}\Gamma^{-1}\tilde{\theta} + \gamma^{-1}\tilde{\psi}^2\Big), \qquad \tilde{\theta}=\theta-\theta^{*},\quad \tilde{\psi}=\psi-\psi^{*}
 $$
 
 理论结果：`V` 满足
