@@ -34,13 +34,13 @@
 论文研究的二阶（非匹配）系统：
 
 $$
-\dot{x}_1 = x_2 + f^*(x_1), \qquad \dot{x}_2 = u, \qquad y = x_1
+\dot{x}_1 = x_2 + f^{\ast}(x_1), \qquad \dot{x}_2 = u, \qquad y = x_1
 $$
 
 其中 `f*` 是未知光滑函数。把标称已知部分记作 `f`，未知部分记作 `φ`：
 
 $$
-f^*(x_1) = f(x_1) + \varphi(x_1), \qquad \varphi(x_1) = \theta^{*T}\zeta(x_1) + \delta(x_1)
+f^{\ast}(x_1) = f(x_1) + \varphi(x_1), \qquad \varphi(x_1) = \theta^{\ast T}\zeta(x_1) + \delta(x_1)
 $$
 
 - `ζ(x1)`：已知的 RBF 基函数向量（固定中心、固定宽度）；
@@ -88,7 +88,7 @@ $$
 **Lyapunov 函数**
 
 $$
-V = \tfrac{1}{2}\Big(z_1^2 + z_2^2 + \tilde{\theta}^{T}\Gamma^{-1}\tilde{\theta} + \gamma^{-1}\tilde{\psi}^2\Big), \qquad \tilde{\theta}=\theta-\theta^{*},\quad \tilde{\psi}=\psi-\psi^{*}
+V = \tfrac{1}{2}\Big(z_1^2 + z_2^2 + \tilde{\theta}^{T}\Gamma^{-1}\tilde{\theta} + \gamma^{-1}\tilde{\psi}^2\Big), \qquad \tilde{\theta}=\theta-\theta^{\ast},\quad \tilde{\psi}=\psi-\psi^{\ast}
 $$
 
 理论结果：`V` 满足
