@@ -67,7 +67,11 @@ $$
 u = -z_1 - z_2 + \frac{\partial \alpha}{\partial x_1}\big(x_2 + f + \theta^{T}\zeta\big) + \frac{\partial \alpha}{\partial \theta}\,\dot{\theta} + \frac{\partial \alpha}{\partial \psi}\,\dot{\psi} - \beta_2
 $$
 
-其中 $\beta_2 = \psi\,w_2$，$w_2 = \frac{\partial \alpha}{\partial x_1}\,\tanh\!\big(\frac{\partial \alpha}{\partial x_1}\,z_2 / \varepsilon\big)$。
+其中
+
+$$
+\beta_2 = \psi\, w_2, \qquad w_2 = \frac{\partial \alpha}{\partial x_1}\,\tanh\left(\frac{\partial \alpha}{\partial x_1}\,\frac{z_2}{\varepsilon}\right)
+$$
 
 **权重自适应律**（含泄漏项 `σ`，防止权重漂移）
 
