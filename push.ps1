@@ -5,5 +5,6 @@ param(
 
 # Thin wrapper: push through whatever proxy network.cfg describes (local URL or share link).
 $net = Join-Path $PSScriptRoot "net.ps1"
-& $net @(@("git", "push") + $GitArgs)
+$all = @("git", "push") + $GitArgs
+& $net @all
 exit $LASTEXITCODE
